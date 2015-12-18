@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Subscription plan exercice</title>
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+	<div id="app">
+		<div v-for="plan in plans">
+			<plan :plan="plan" :active.sync="active"></plan>
+		</div>
+		
+		<pre>{{ $data | json }}</pre>
+	</div>
+	
+	<template id="plan-template">
+		<div class="plan">
+			<span class="plan__name">{{plan.type}}:</span>
+			<span class="plan__price">{{plan.price}}/month</span>
+			<button class="plan__button" 
+					@click="setActivePlan()"
+					v-show="plan.type != active.type"
+			>
+					{{isUpgrade}}
+			
+			</button>
+			<span v-else>Current Plan</span>
+		</div>
+	</template>
+	
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	<script src="/assets/js/app_subscription_plan_exercice.js"></script>
+</body>
+</html>

@@ -8,3 +8,15 @@
 button{
 	display: block;
 }
+
+.plan{
+ margin: 0.5em 0;	
+}
+
+.plan__name, .plan__price{
+	display: inline-block;
+	width: 6em;
+}
+.plan__button{
+	display: inline-block;
+}

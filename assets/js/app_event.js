@@ -15,7 +15,7 @@
 			},
 			
 			formSubmit: function(){
-				console.log("Butoon pressed!");
+				console.log("Button pressed!");
 			}
 		}
 		
