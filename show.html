@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<title>v-show</title>
+</head>
+<body>
+	<div id="app">
+		<form action="#">
+			<span class="error" v-show="!text">
+				You must enter a message
+			</span>
+			<textarea name="" id="" cols="30" rows="10" v-on:keyup="isTyping" v-model="text"></textarea>
+			
+			<button type="submit" v-show="text">
+				Send message
+			</button>
+		</form>
+			<pre>{{$data | json}}</pre>
+	</div>
+<script src="/node_modules/vue/dist/vue.js"></script>
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event Handler</title>
+</head>
+<body>
+	<div id="app">
+		
+		<h2>Example 1</h2>
+		
+		<form action="done.html" @submit.prevent="handleIt">
+			<button type="submit" @click="formSubmit">submit!</button>
+		</form>
+		
+		<h2>Example 2</h2>
+		
+		<button type="submit" @click="count += 1">
+			Increment Counter: {{ count }}
+		</button>
+	</div>
+	<script src="/node_modules/vue/dist/vue.js"></script>
+	<script src="/assets/js/app_event.js"></script>
+</body>
+</html>
